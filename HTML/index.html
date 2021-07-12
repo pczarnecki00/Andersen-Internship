@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='author' content="Piotr Czarnecki">
+    <meta name="keywords" content="HTML">
+    <meta name="description" content="HTML semantics">
+    <title>Semantics</title>
+</head>
+
+<body>
+    <header id="main-header">
+        <p>header</p>
+    </header>
+    <section id="some-section" class='section-width'>
+        <header id="secondary-header">
+            <h2>heading</h2>
+        </header>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi odit dolore impedit ipsum voluptas animi eius dicta recusandae placeat quaerat.
+        </p>
+    </section>
+
+    <section id="second-section" class='section-width'>
+
+        <form action="URL" novalidate method="POST" target="_self" id="my-form" class="element-width">
+
+            <header>
+                <h2>Item Form</h2>
+            </header>
+
+            <input type="checkbox" name="checkbox1" id="checkbox1" required>
+            <label for="checkbox1">checkbox1</label>
+            <input type="checkbox" name="checkbox2" id="checkbox2">
+            <label for="checkbox2">checkbox2</label>
+            <input type="radio" id="radio1" name="radio-choice">
+            <label for="radio1">radio 1</label>
+            <input type="radio" id="radio2" name="radio-choice">
+            <label for="radio2">radio 2</label>
+            <input type="text" placeholder="placeholder">
+            <button type="submit" form="my-form">add</button>
+
+        </form>
+
+        <div class="element-width">
+            <article>
+                <header>
+                    <h2>heading</h2>
+                </header>
+                <p>
+                    regular description about this block, soe text to fill the area,
+                </p>
+            </article>
+            <a href="www.google.com">link to more info</a>
+        </div>
+
+    </section>
+
+    <section class="section-width" id="last-section">
+        <header>
+            <h2>heading</h2>
+        </header>
+        <ul id="my-list">
+            <li class="li-style">
+                <span class="name">name</span>
+                <span class="description">item description</span>
+            </li>
+            <li class="li-style">
+                <span class="name">name</span>
+                <span class="description">item description</span>
+            </li>
+            <li class="li-style">
+                <span class="name">name</span>
+                <span class="description">item description</span>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <address>My adress</address>
+    </footer>
+</body>
+
+</html>
