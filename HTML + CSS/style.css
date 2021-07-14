@@ -1,0 +1,151 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Navigation Bar */
+
+span {
+    display: block;
+}
+
+span, li {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.navigation-bar {
+    width: 300px;
+    box-shadow: 1px 1px 15px -5px #000;
+    margin-top: 20px;
+}
+
+.navigation-bar div.info-box {
+    border-bottom: 1px solid rgba(141, 141, 141, 0.548);
+    padding: 15px;
+    padding-bottom: 20px;
+}
+
+.navigation-bar div.info-box img {
+    height: 60px;
+    border-radius: 70px;
+    margin-bottom: 20px;
+}
+
+.navigation-bar div.info-box div.name-box {
+    position: relative;
+}
+
+.navigation-bar div.info-box div.name-box i {
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    font-size: 0.8em;
+    color: rgb(99, 99, 99);
+}
+
+.navigation-bar div.info-box div.name-box span.name-tag {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.navigation-bar div.info-box div.name-box span.mail-tag {
+    font-size: 0.9em;
+    color: rgb(99, 99, 99);
+}
+
+.navigation-bar>ul {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+}
+
+.navigation-bar>ul>li:first-child {
+    background-color: rgba(137, 43, 226, 0.336);
+    color: rgb(76, 2, 146);
+    border-radius: 5px;
+}
+
+.navigation-bar>ul>li {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: rgb(99, 99, 99);
+    font-size: 1em;
+}
+
+.navigation-bar>ul>li:hover {
+    background-color: rgba(137, 43, 226, 0.336);
+    color: rgb(76, 2, 146);
+    border-radius: 5px;
+}
+
+.navigation-bar>ul>li>i {
+    display: inline-block;
+    width: 25%;
+    font-size: 1.3em;
+}
+
+/* Table */
+
+table {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+table tr {
+    border-bottom: 1px solid #000;
+}
+
+table .last {
+    text-align: right;
+}
+
+td, th {
+    padding: 20px
+}
+
+/* Timer pick */
+
+.timer {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    align-items: center;
+}
+
+.timer .digit {
+    font-size: 3em;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.purple {
+    background-color: rgba(137, 43, 226, 0.336);
+    color: rgb(76, 2, 146);
+}
+
+.timer .divider {
+    padding: 0 5px;
+}
+
+.timer .grey {
+    background-color: grey;
+}
+
+.timer .ampm {
+    margin-left: 20px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.timer .letters {
+    font-size: 1em;
+    padding: 9px;
+}
+

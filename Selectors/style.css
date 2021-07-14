@@ -1,0 +1,92 @@
+.first {
+    color: red;
+}
+
+.eleone.eletwo {
+    color: blue;
+}
+
+.firstClass .secondClass {
+    background-color: green;
+}
+
+#myID {
+    color: green;
+}
+
+article * {
+    background-color: rosybrown;
+}
+
+p.intro {
+    color: peru;
+}
+
+aside, strong {
+    color: purple;
+}
+
+div p {
+    color: royalblue
+}
+
+div > p {
+    color: royalblue
+}
+
+div+p {
+    color: red;
+}
+
+p ~ ul {
+    color: salmon;
+}
+
+a[href*="w3schools"] {
+    text-decoration: none;
+}
+
+a#only:active {
+    color: white;
+}
+
+p.afterBefore::before {
+    content: 'This is before thats why its red but still the same p ';
+    color:red;
+}
+p.afterBefore::after {
+    content: 'This is after thats why its blue but still the same p ';
+    color:blue;
+}
+input:checked {
+    margin-left: 50px;
+}
+input:default {
+    box-shadow: 0 0 10px 1px purple;
+}
+input:disabled {
+    background-color:pink;
+}
+
+span:empty::after {
+    content: "This text is added through :empty selector";
+}
+
+input:enabled {
+    background-color: rgba(102, 51, 153, 0.308);
+}
+div#example p:first-child {
+    color: saddlebrown;
+}
+
+p:first-of-type {
+    color:gold;
+}
+
+p::first-letter {
+    color:red ;
+}
+article::first-line {
+    background-color: seagreen;
+}
+
