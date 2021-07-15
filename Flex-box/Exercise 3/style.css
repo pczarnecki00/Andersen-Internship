@@ -1,0 +1,28 @@
+.wrapper {
+    width: 800px;
+    background-color: rgb(30, 30, 61);
+    padding: 50px;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    padding: 20px 0px;
+}
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.item {
+    flex-grow: 1;
+    height: 100px;
+    margin: 0 20px;
+    border-radius: 10px;
+}
+.grow {
+    flex-grow: 2;
+}
