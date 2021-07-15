@@ -37,6 +37,7 @@
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: capitalize;
+    cursor: pointer;
 }
 
 .sidebar ul li.active, .sidebar ul li:hover  {
