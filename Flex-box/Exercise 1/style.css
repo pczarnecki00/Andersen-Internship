@@ -1,8 +1,8 @@
 .wrapper {
     background-color:aquamarine;
     padding: 30px;
-    width: 600px;
     margin: 0 auto;
+    width: 50%;
 }
 h2, p {
     font-family: Arial, Helvetica, sans-serif;
@@ -14,6 +14,8 @@ h2, p {
     list-style: none;
     background-color: rgb(187, 187, 187);
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 .wrapper .list .li-item {
@@ -22,9 +24,6 @@ h2, p {
 }
 .wrapper .list .li-item:not(:last-child) {
     border-bottom: 1px solid #000;
-}
-.wrapper .list .li-item .img {
-    flex-shrink: 0;
 }
 
 .wrapper .list .li-item .content {

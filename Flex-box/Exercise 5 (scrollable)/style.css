@@ -1,9 +1,12 @@
 * {
     box-sizing: border-box;
 }
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .wrapper {
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
     margin-top: 100px;
 }
@@ -12,7 +15,7 @@
     overflow: hidden;
 }
 
-.scroll-bar > nav > ul {
+.scroll-bar > .main-nav > .nav {
     list-style: none;
     padding: 0;
     display: flex;
@@ -21,10 +24,9 @@
     width: 100%;
 }
 
-.scroll-bar > nav > ul > li > a {
+.scroll-bar > .main-nav > .nav > .nav-item > a {
     padding: 20px 30px;
     background-color: rgba(218, 218, 218, 0.527);
-    font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
@@ -34,43 +36,45 @@
     transition: background-color 0.5s ease-in-out;
 }
 
-.scroll-bar > nav > ul > li > a:hover {
+.scroll-bar > .main-nav > .nav > .nav-item > a:hover {
     background-color: rgba(128, 0, 128, 0.253);
 }
 
-.scroll-bar > nav > ul > li a.active {
+.scroll-bar > .main-nav > .nav > .nav-item a.active {
     border-bottom: 2px solid black;
     background-color: rgba(128, 0, 128, 0.397);
     color: rgb(128, 0, 128);
     margin-top: -2px;
 }
 
-.scroll-bar > nav > ul > li > a:focus {
+.scroll-bar > .main-nav > .nav > .nav-item > a:focus {
     background-color: rgba(128, 0, 128, 0.397);
 
 }
 
-.scroll-bar > nav > ul > li > a > span {
+.scroll-bar > .main-nav > .nav > .nav-item > a > span {
     white-space: nowrap;
 }
 
 .content {
     overflow: hidden;
-    background-color: red;
+    background-color: rgb(105, 44, 44);
 }
 
 .content > .inner-wrapper {
     height: 300px;
     display: flex;
     overflow: scroll;
-    position: relative;
     width: 100%;
     margin-bottom: -17px;
     box-sizing: content-box;
     padding-right: 17px;
 }
 
-.content > .inner-wrapper > section {
+.content > .inner-wrapper > .section-item {
     min-width: calc(100% + 17px);
     padding: 15px;  
+}
+.content > .inner-wrapper > .section-item:last-child {
+    min-width: 100%;
 }

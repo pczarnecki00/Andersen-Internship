@@ -1,5 +1,5 @@
-let data = document.getElementsByClassName('section-item');
-data[data.length -1].style.minWidth = '100%';
+// let data = document.getElementsByClassName('section-item');
+// data[data.length -1].style.minWidth = '100%';
 
 for (let item of document.getElementsByClassName('item')) {
 
