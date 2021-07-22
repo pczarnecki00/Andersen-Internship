@@ -1,46 +1,47 @@
-document.getElementsByTagName('body')[0].addEventListener('click', function(event){
-    //Prevent form submiting
+const toggleTodoCoplete = function (elem) {
+    document.querySelectorAll('.todo-list__text').forEach(item => elem.dataset.id == item.dataset.id && elem.querySelector('.todo-list__text').classList.toggle('text--complete'), elem.querySelector('.btn--complete').classList.toggle('btn--hovered'));
+
+}
+
+const deleteFunc = function (elem) {
+    document.querySelectorAll('.todo-list__text').forEach(item => elem.dataset.id == item.dataset.id && elem.remove());
+}
+
+const completeBtnAddEventHandler = (elem) => {
+    elem.querySelector('.btn--complete').addEventListener('click', function () {
+        toggleTodoCoplete(elem);
+    });
+
+    elem.querySelector('.btn--delete').addEventListener('click', function () {
+        deleteFunc(elem);
+    });
+
+}
+
+document.querySelector('.todo-form__button').addEventListener('click', function (event) {
     event.preventDefault();
 
-    //Access to input value for other variavbles
-    const input = document.querySelector('.input-container__input').value;
+    const toDoInput = document.querySelector('.todo-form__input').value.trim();
 
-    //Adds and deletes classes with styles for completed todo's through nodes
-    const toggleFunc = function (a) {
-        a.parentNode.parentNode.childNodes[1].classList.toggle('span-complete');
-        a.parentNode.parentNode.childNodes[3].childNodes[1].classList.toggle('btn-hovered');
-    }
-    
-    //Deletes whole todo's li node 
-    const deleteFunc = function (b) {
-        b.parentNode.parentNode.remove();
-    }
-
-    //Adds todo's to the list as a li element with it's children and input's value
-    const addItem = function () {
-       
+    const addTodo = function () {
+        const elementId = Date.now();
         const li = document.createElement('li');
+
+        li.setAttribute('data-id', elementId)
         li.classList.add('todo-list__item');
 
-        li.innerHTML = ` <span class="todo-list__span">${input}</span>
+        li.innerHTML = ` <span data-id="${elementId}" class="todo-list__text">${toDoInput}</span>
         <div class="todo-list__btn-panel">
-            <button class="btn-panel__button btn-complete btn-small">&#10003</button>
-            <button class="btn-panel__button btn-delete btn-small">&#10008</button>
+            <button name="addButton" data-id="${elementId} " class="button btn--complete btn--small">&#10003</button>
+            <button data-id="${elementId} "class="button btn--delete btn--small">&#10008</button>
         </div>`;
+        completeBtnAddEventHandler(li);
 
         document.querySelector('.todo-list').append(li);
     }
 
-    const className = event.target.className;
 
-    //Ternery  used in order to distinguish which function should be called based on event.target.className properties
-    className.includes('input-container__button')  
-        ? input.trim() && addItem()
-        : className.includes('btn-complete') 
-            ? toggleFunc(event.target) 
-            : className.includes('btn-delete') 
-                ? deleteFunc(event.target) 
-                : '';
+    toDoInput && addTodo();
 
-});
+})
 

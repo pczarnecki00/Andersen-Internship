@@ -19,26 +19,26 @@ body {
     margin: auto;
 }
 
-.input-container {
+.todo-form {
     display: flex;
     flex-direction: column;
     height: 150px;
     justify-content: space-evenly;
 }
 
-.input-container__input-label {
+.todo-form__input-label {
     font-size: 1.5em;
     font-weight: 600;
 }
 
-.input-container__input {
+.todo-form__input {
     padding: 10px;
     outline: none;
     border-radius: 5px;
     border: 1px solid rgb(184, 181, 181);
 }
 
-.input-container__button {
+.todo-form__button {
     align-self: flex-start;
     border-radius: 5px;
     padding: 10px 20px;
@@ -49,11 +49,11 @@ body {
     color: #fff;
 }
 
-.input-container__button:hover {
+.todo-form__button:hover {
     background-color: #1349b4;
 }
 
-.list-wrapper {
+.wrapper {
     margin-top: 20px
 }
 
@@ -81,7 +81,7 @@ body {
     font-size: 1.2em;
 }
 
-.span-complete {
+.text--complete {
     text-decoration: line-through;
     text-decoration-thickness: 3px;
 }
@@ -91,7 +91,7 @@ body {
     align-self: center;
 }
 
-.btn-small {
+.btn--small {
     font-size: 1.2em;
     margin-right: 5px;
     background-color: #fff;
@@ -104,22 +104,22 @@ body {
 }
 
 
-.btn-complete {
+.btn--complete {
     color: green;
     border: 1px solid green;
 }
 
-.btn-complete:hover, .btn-hovered {
+.btn--complete:hover, .btn--hovered {
     background-color: green;
     color: #fff;
 }
 
-.btn-delete {
+.btn--delete {
     color: red;
     border: 1px solid red;
 }
 
-.btn-delete:hover {
+.btn--delete:hover {
     background-color: red;
     color: #fff;
 }
