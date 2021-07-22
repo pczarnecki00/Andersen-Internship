@@ -1,19 +1,19 @@
-const toggleTodoCoplete = function (elem) {
+const toggleTodoComplete = function (elem) {
     document.querySelectorAll('.todo-list__text').forEach(item => elem.dataset.id == item.dataset.id && elem.querySelector('.todo-list__text').classList.toggle('text--complete'), elem.querySelector('.btn--complete').classList.toggle('btn--hovered'));
 
 }
 
-const deleteFunc = function (elem) {
+const deleteTodo = function (elem) {
     document.querySelectorAll('.todo-list__text').forEach(item => elem.dataset.id == item.dataset.id && elem.remove());
 }
 
-const completeBtnAddEventHandler = (elem) => {
+const btnsAddEventHandler = (elem) => {
     elem.querySelector('.btn--complete').addEventListener('click', function () {
-        toggleTodoCoplete(elem);
+        toggleTodoComplete(elem);
     });
 
     elem.querySelector('.btn--delete').addEventListener('click', function () {
-        deleteFunc(elem);
+        deleteTodo(elem);
     });
 
 }
@@ -35,7 +35,7 @@ document.querySelector('.todo-form__button').addEventListener('click', function 
             <button name="addButton" data-id="${elementId} " class="button btn--complete btn--small">&#10003</button>
             <button data-id="${elementId} "class="button btn--delete btn--small">&#10008</button>
         </div>`;
-        completeBtnAddEventHandler(li);
+        btnsAddEventHandler(li);
 
         document.querySelector('.todo-list').append(li);
     }
