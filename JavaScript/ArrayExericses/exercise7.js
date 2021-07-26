@@ -6,7 +6,7 @@ const arr4 = [1, 2, 3, 4];
 const compareArr = (firstArr, secondArr) => {
      
     return (firstArr.length == secondArr.length) && (firstArr.map((element, index) => secondArr[index] == element).includes(false) ? false : true); 
-    // && firstArr.map((element, index) => (secondArr[index] == element).includes(false) ? false : true
+
 }
 
 console.log(`First compare arr1 and arr2: ${compareArr(arr1, arr2)}`);
