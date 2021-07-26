@@ -1,5 +1,10 @@
 const toggleTodoComplete = function (elem) {
-    document.querySelectorAll('.todo-list__text').forEach(item => elem.dataset.id == item.dataset.id && elem.querySelector('.todo-list__text').classList.toggle('text--complete'), elem.querySelector('.btn--complete').classList.toggle('btn--hovered'));
+    document.querySelectorAll('.todo-list__text').forEach(item =>
+
+        elem.dataset.id == item.dataset.id && elem.querySelector('.todo-list__text').classList.toggle('text--complete'),
+        elem.querySelector('.btn--complete').classList.toggle('btn--hovered')
+        
+    );
 
 }
 
